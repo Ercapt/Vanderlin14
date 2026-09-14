@@ -1,4 +1,4 @@
-<img width="300" height="149" alt="logo" src="https://github.com/user-attachments/assets/558c7ee2-01c7-44c3-97c6-9187720b8fed" />
+            <img width="300" height="75" alt="logo" src="https://github.com/user-attachments/assets/39e3a6b1-c7dd-4b65-b045-46c97616f1dc" />
 
 # Ласкаво просимо на сторінку Vanderlin 14
 
