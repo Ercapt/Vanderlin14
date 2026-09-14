@@ -1,69 +1,48 @@
-<!--
-SPDX-FileCopyrightText: 2017 PJB3005 <pieterjan.briers@gmail.com>
-SPDX-FileCopyrightText: 2018 Pieter-Jan Briers <pieterjan.briers@gmail.com>
-SPDX-FileCopyrightText: 2019 Ivan <silvertorch5@gmail.com>
-SPDX-FileCopyrightText: 2019 Silver <silvertorch5@gmail.com>
-SPDX-FileCopyrightText: 2020 Injazz <43905364+Injazz@users.noreply.github.com>
-SPDX-FileCopyrightText: 2020 RedlineTriad <39059512+RedlineTriad@users.noreply.github.com>
-SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <zddm@outlook.es>
-SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@googlemail.com>
-SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
-SPDX-FileCopyrightText: 2021 mirrorcult <lunarautomaton6@gmail.com>
-SPDX-FileCopyrightText: 2022 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
-SPDX-FileCopyrightText: 2022 ike709 <ike709@users.noreply.github.com>
-SPDX-FileCopyrightText: 2023 iglov <iglov@avalon.land>
-SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
-SPDX-FileCopyrightText: 2024 Kira Bridgeton <161087999+Verbalase@users.noreply.github.com>
-SPDX-FileCopyrightText: 2024 Rares Popa <2606875+rarepops@users.noreply.github.com>
-SPDX-FileCopyrightText: 2024 router <messagebus@vk.com>
-SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
+<img width="300" height="149" alt="logo" src="https://github.com/user-attachments/assets/558c7ee2-01c7-44c3-97c6-9187720b8fed" />
 
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
+# Ласкаво просимо на сторінку Vanderlin 14
 
-<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://github.com/Goob-Station/Goob-Station/blob/master/Resources/Textures/Logo/logo.png" /></p>
+### Походження
+Vanderlin 14 розвивається на основі [Vanderlin](https://github.com/Monkestation/Vanderlin.git), оригінального білда для Space Station 13.
+Проєкт переносить основні механіки, концепції та атмосферу Vanderlin на платформу Space Station 14, адаптуючи їх до можливостей рушія та потреб української спільноти.
 
-This is a fork from the primary repo for Space Station 14 called Goob Station. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server this is the content pack for Goob Station.
+### Сетинг 
 
-If you want to host or create content for SS14, go to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) as it contains both RobustToolbox and the content pack for development of new content packs and is the base for your fork.
+Vanderlin 14 — це новий досвід пригод у світі середньовічного фентезі, де ви створюєте власну історію героя, аристократа, останнього пройдисвіта або ж звичайного жителя цього божевільного світу.
 
-## Links
+## Посилання
 
-[Goob Station Discord Server](https://discord.gg/goobstation) | [Goob Station Development Discord Server](https://discord.gg/zXk2cyhzPN) | [Goob Station Forum](https://forums.goobstation.com/) | [Goob Station Website](https://goobstation.com)
+### Мрія: [Сайт Мрії](https://ss14.com.ua/) | [ДС-сервер Мрії](https://discord.gg/666EFB7J8b)
 
-## Documentation/Wiki
+### Vanderlin: [Оригінальний білд](https://github.com/Monkestation/Vanderlin.git) | [Офіційна вікі](https://wiki.monkestation.com/Vanderlin) | [Офіційний ДС-сервер](https://discord.com/invite/vanderlin)
 
-The Goob Station [docs site](https://docs.goobstation.com/) has documentation on GS14's content, engine, game design, and more. It also has lots of resources for new contributors to the project.
+### Goob Station: [Оригінальний білд](https://github.com/Goob-Station/Goob-Station.git) | [Офіційний ДС-сервер](https://discord.gg/goobstation)
 
-## Contributing
+## Внесення змін
 
-We are happy to accept contributions from anybody. Get in [Development Discord Server](https://discord.gg/zXk2cyhzPN) if you want to help. Feel free to check the [list of issues](https://github.com/Goob-Station/Goob-Station/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!
-While following the [Space Station 14 contribution guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html) is not mandatory for Goob Station, we recommend reviewing them for best practices.
+Білд відкритий до нововведень та перенесення контенту з оригінального білда Vanderlin. Для кращого розуміння та комунікації щодо PR рекомендовано бути присутнім у [нашому ДС-сервері](https://discord.gg/666EFB7J8b).
 
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language consider creating a fork or contributing to a fork.
+## Збірка
 
-## AI-generated contributions disclaimer
-This project does not accept low-effort or wholesale AI-generated contributions. Examples include, but are not limited to:
+1. Клонуйте репозиторій:
+```shell
+git clone https://github.com/Ercapt/Vanderlin-14.git
+```
+2. Відкрийте теку проєкту та запустіть `RUN_THIS.py`, щоб ініціалізувати підмодулі та завантажити рушій:
+```shell
+cd Vanderlin-14
+python RUN_THIS.py
+```
+3. Завершіть збірку:
 
-- Any code (including yaml) generated by tools like GitHub Copilot, ChatGPT, or similar.
-- AI-created artwork, sound files, or other assets.
-- Auto-generated documentation, issue reports or pull request descriptions.
+Зберіть проєкт за допомогою `dotnet build`.
 
-Exceptions to this are simple tools like Rider's single-line completion feature.
+Більш детальну інструкцію можна прочитати на [офіційному порталі розробників](https://docs.spacestation14.com/en/general-development/setup.html).
 
-## Building
+## Ліцензія
 
-1. Clone this repo.
-2. Run `RUN_THIS.py` to init submodules and download the engine.
-3. Compile the solution.
+Код, успадкований від Goob-Station, поширюється відповідно до умов [AGPL-3.0](https://github.com/Goob-Station/Goob-Station/blob/b6ef0df8a88440cff2ddff8977781fcd66aca88f/LICENSES/AGPL-3.0-or-later.txt). Певні успадковані асети можуть знаходитися під ліцензією [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) або [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-[More detailed instructions on building the project.](https://docs.goobstation.com/en/general-development/setup.html)
+Власний код та зміни, розроблені для Vanderlin 14, поширюються під [AGPL-3.0](https://github.com/Ercapt/Vanderlin-14/blob/master/LICENSE.TXT), якщо для конкретного файлу або компонента не зазначено інше.
 
-## License
-
-All code in this codebase is released under the AGPL-3.0-or-later license. Each file includes REUSE Specification headers or separate .license files that specify a dual license option. This dual licensing is provided to simplify the process for projects that are not using AGPL, allowing them to adopt the relevant portions of the code under an alternative license. You can review the complete texts of these licenses in the LICENSES/ directory.
-
-Most media assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
-
-Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+Портовані з оригінального Vanderlin текстури та звукові ресурси поширюються під [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), якщо для конкретного ресурсу не зазначено інше.![Uploading logo.png…]()
