@@ -43,4 +43,4 @@ python RUN_THIS.py
 
 Власний код та зміни, розроблені для Vanderlin 14, поширюються під [AGPL-3.0](https://github.com/Ercapt/Vanderlin-14/blob/master/LICENSE.TXT), якщо для конкретного файлу або компонента не зазначено інше.
 
-Портовані з оригінального Vanderlin текстури та звукові ресурси поширюються під [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), якщо для конкретного ресурсу не зазначено інше.![Uploading logo.png…]()
+Портовані з оригінального Vanderlin текстури та звукові ресурси поширюються під [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), якщо для конкретного ресурсу не зазначено інше.
