@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 224,
+        "y": 96
+    },
+    "states": [
+        {
+            "name": "carriage"
+        },
+        {
+            "name": "carriage_lit",
+            "delays": [
+                [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
+                ]
+            ]
+        },
+        {
+            "name": "carriage_normal"
+        }
+    ]
+}

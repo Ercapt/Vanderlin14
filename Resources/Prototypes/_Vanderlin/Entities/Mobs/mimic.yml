@@ -1,0 +1,112 @@
+# Активний стан
+- type: entity
+  id: MimicBaseCase
+  name: скриня-мімік
+  description: Ймовірно, вона хоче вас з'їсти... Тож не роздивляйтеся, якщо не бажаєте стати її обідом.
+  parent: [ SimpleMobBase, MobCombat ]
+  components:
+  - type: Tag
+    tags:
+    - FootstepSound
+  - type: InputMover
+  - type: MobMover
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcFist
+    damage:
+      types:
+        Blunt: 28
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5.5
+  - type: Butcherable
+    spawned:
+    - id: DrinkChangelingStingCan # ЗАМІНИТИ НА СКАРБИ
+      amount: 1
+
+# Золоті міміки
+- type: entity
+  id: GoldenMimic
+  parent: MimicBaseCase
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    noRot: true
+    state: g_mimic_1
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    state: g_mimic_1
+
+- type: entity
+  id: GoldenMimicAlt
+  parent: MimicBaseCase
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    noRot: true
+    state: g_mimic_2
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    state: g_mimic_2
+
+- type: entity
+  id: GoldenMimicAlt2
+  parent: MimicBaseCase
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    noRot: true
+    state: g_mimic_3
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    state: g_mimic_3
+
+# Срібні міміки
+- type: entity
+  id: SilverMimic
+  parent: MimicBaseCase
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    noRot: true
+    state: s_1_mimic
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    state: s_1_mimic
+
+- type: entity
+  id: SilverMimicAlt
+  parent: MimicBaseCase
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    noRot: true
+    state: s_2_mimic
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    state: s_2_mimic
+
+- type: entity
+  id: SilverMimicAlt2
+  parent: MimicBaseCase
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    noRot: true
+    state: s_3_mimic
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Magic/mimics.rsi
+    state: s_3_mimic

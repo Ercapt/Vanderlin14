@@ -1,0 +1,126 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "grass",
+            "directions": 4
+        },
+        {
+            "name": "road",
+            "directions": 4
+        },
+        {
+            "name": "grassedge-n"
+        },
+        {
+            "name": "grassedge-s"
+        },
+        {
+            "name": "grassedge-w"
+        },
+        {
+            "name": "grassedge-e"
+        },
+        {
+            "name": "grass_yelmix",
+            "directions": 4
+        },
+        {
+            "name": "grass_yelmixedge-n"
+        },
+        {
+            "name": "grass_yelmixedge-s"
+        },
+        {
+            "name": "grass_yelmixedge-w"
+        },
+        {
+            "name": "grass_yelmixedge-e"
+        },
+        {
+            "name": "grass_yel",
+            "directions": 4
+        },
+        {
+            "name": "grass_yeledge-n"
+        },
+        {
+            "name": "grass_yeledge-s"
+        },
+        {
+            "name": "grass_yeledge-w"
+        },
+        {
+            "name": "grass_yeledge-e"
+        },
+        {
+            "name": "grass_red",
+            "directions": 4
+        },
+        {
+            "name": "grass_rededge-n"
+        },
+        {
+            "name": "grass_rededge-s"
+        },
+        {
+            "name": "grass_rededge-w"
+        },
+        {
+            "name": "grass_rededge-e"
+        },
+        {
+            "name": "grass_cold",
+            "directions": 4
+        },
+        {
+            "name": "grass_coldedge-n"
+        },
+        {
+            "name": "grass_coldedge-s"
+        },
+        {
+            "name": "grass_coldedge-w"
+        },
+        {
+            "name": "grass_coldedge-e"
+        },
+        {
+            "name": "grass_healthy",
+            "directions": 4
+        },
+        {
+            "name": "grass_healthyedge-n"
+        },
+        {
+            "name": "grass_healthyedge-s"
+        },
+        {
+            "name": "grass_healthyedge-w"
+        },
+        {
+            "name": "grass_healthyedge-e"
+        },
+        {
+            "name": "hellgrass"
+        },
+        {
+            "name": "hellgrass-n"
+        },
+        {
+            "name": "hellgrass-s"
+        },
+        {
+            "name": "hellgrass-w"
+        },
+        {
+            "name": "hellgrass-e"
+        }
+    ]
+}

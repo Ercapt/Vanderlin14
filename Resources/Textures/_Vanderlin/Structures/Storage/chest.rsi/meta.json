@@ -1,0 +1,131 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "chest1base"
+        },
+        {
+            "name": "chest1open"
+        },
+        {
+            "name": "chest1sbase"
+        },
+        {
+            "name": "chest1sopen"
+        },
+        {
+            "name": "chest1s_closed"
+        },
+        {
+            "name": "chest1_closed"
+        },
+        {
+            "name": "chest2base"
+        },
+        {
+            "name": "chest2open"
+        },
+        {
+            "name": "chest2sbase"
+        },
+        {
+            "name": "chest2sopen"
+        },
+        {
+            "name": "chest2s_closed"
+        },
+        {
+            "name": "chest2_closed"
+        },
+        {
+            "name": "chest3base"
+        },
+        {
+            "name": "chest3open"
+        },
+        {
+            "name": "chest3sbase"
+        },
+        {
+            "name": "chest3sopen"
+        },
+        {
+            "name": "chest3s_closed"
+        },
+        {
+            "name": "chest3_closed"
+        },
+        {
+            "name": "chestfancy_neubase"
+        },
+        {
+            "name": "chestfancy_neuopen"
+        },
+        {
+            "name": "chestfancy_neu_closed"
+        },
+        {
+            "name": "chestiron_neubase"
+        },
+        {
+            "name": "chestiron_neuopen"
+        },
+        {
+            "name": "chestiron_neu_closed"
+        },
+        {
+            "name": "chestweird3open"
+        },
+        {
+            "name": "chest_neubase"
+        },
+        {
+            "name": "chest_neuopen"
+        },
+        {
+            "name": "chest_neu_closed"
+        },
+        {
+            "name": "icon_chest1"
+        },
+        {
+            "name": "icon_chest1s"
+        },
+        {
+            "name": "icon_chest2"
+        },
+        {
+            "name": "icon_chest2s"
+        },
+        {
+            "name": "icon_chest3"
+        },
+        {
+            "name": "icon_chest3s"
+        },
+        {
+            "name": "icon_chestfancy_neu"
+        },
+        {
+            "name": "icon_chestiron_neu"
+        },
+        {
+            "name": "icon_chestweird3"
+        },
+        {
+            "name": "icon_chestweird3base"
+        },
+        {
+            "name": "icon_chestweird3_closed"
+        },
+        {
+            "name": "icon_chest_neu"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 128,
+        "y": 96
+    },
+    "states": [
+        {
+            "name": "portal"
+        },
+        {
+            "name": "portal_mask"
+        }
+    ]
+}

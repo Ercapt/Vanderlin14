@@ -1,0 +1,194 @@
+- type: entity
+  parent: [ BaseStructureDynamic, BasePaperLabelableVisualized ]
+  id: ChestBase
+  name: скриня
+  description: Зручне сховище для речей, всередині точно щось цінне... Якщо це не так, спробуйте знайти іншу скриню.
+  components:
+  - type: Animateable
+  - type: Transform
+    noRot: true
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest_neu
+  - type: Sprite
+    noRot: true
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest_neubase
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest_neuopen
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: InteractionOutline
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 50
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+  - type: EntityStorage
+  - type: PlaceableSurface
+    isPlaceable: false # defaults to closed.
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest_neuopen
+    stateDoorClosed: chest_neu_closed
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+      paper_label: !type:ContainerSlot
+  - type: Construction
+    graph: CrateGenericSteel
+    node: crategenericsteel
+    containers:
+      - entity_storage
+  - type: RequireProjectileTarget
+  - type: Tag
+    tags:
+      - Crate
+
+- type: entity
+  parent: ChestBase
+  id: GoldenChest
+  name: оздоблена скриня
+  description: Ця скриня має золоте оздоблення, можливо, всередині є щось цінне.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest1base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest1_closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest1
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest1open
+    stateDoorClosed: chest1_closed
+
+- type: entity
+  parent: ChestBase
+  id: GoldenChestAlt
+  name: оздоблена скриня
+  description: Ця скриня має золоте оздоблення, можливо, всередині є щось цінне.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest2base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest2_closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest2
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest2open
+    stateDoorClosed: chest2_closed
+
+- type: entity
+  parent: ChestBase
+  id: GoldenChestAlt2
+  name: оздоблена скриня
+  description: Ця скриня має рясне золоте оздоблення, всередині є щось цінне.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest3base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest3_closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest3
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest3open
+    stateDoorClosed: chest3_closed
+
+# срібні скрині
+
+- type: entity
+  parent: ChestBase
+  id: SilverChest
+  name: срібна скриня
+  description: Ця скриня має срібне оздоблення, можливо, всередині є щось цінне.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest1sbase
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest1s_closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest1s
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest1sopen
+    stateDoorClosed: chest1s_closed
+
+- type: entity
+  parent: ChestBase
+  id: SilverChestAlt
+  name: срібна скриня
+  description: Ця скриня має срібне оздоблення, можливо, всередині є щось цінне.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest2sbase
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest2s_closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest2s
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest2sopen
+    stateDoorClosed: chest2s_closed
+
+- type: entity
+  parent: ChestBase
+  id: SilverChestAlt2
+  name: срібна скриня
+  description: Ця скриня має рясне срібне оздоблення, всередині є щось цінне.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    layers:
+    - state: chest3sbase
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: chest3s_closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: _Vanderlin/Structures/Storage/chest.rsi
+    state: icon_chest3s
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: chest3sopen
+    stateDoorClosed: chest3s_closed

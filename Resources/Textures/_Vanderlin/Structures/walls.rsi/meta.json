@@ -1,0 +1,171 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from cmss13 at https://github.com/Monkestation/Vanderlin/blob/97510c389c35c75a06fd2dda113e25de8e701fe2/icons/turf/walls.dmi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "stonebrick"
+        },
+        {
+            "name": "stonebrick1",
+            "directions": 4
+        },
+        {
+            "name": "stonebrick2",
+            "directions": 4
+        },
+        {
+            "name": "stonebricklight"
+        },
+        {
+            "name": "woodplain"
+        },
+        {
+            "name": "wooddark-k",
+            "directions": 4
+        },
+        {
+            "name": "slittedwooddark"
+        },
+        {
+            "name": "shroud1",
+            "directions": 4
+        },
+        {
+            "name": "shroud2",
+            "directions": 4
+        },
+        {
+            "name": "treetop2",
+            "directions": 4
+        },
+        {
+            "name": "treetop1",
+            "directions": 4
+        },
+        {
+            "name": "decostone-c"
+        },
+        {
+            "name": "decostone-b"
+        },
+        {
+            "name": "decostone-l",
+            "directions": 4
+        },
+        {
+            "name": "decostone-e",
+            "directions": 4
+        },
+        {
+            "name": "decostone-cand"
+        },
+        {
+            "name": "decostone-b-green"
+        },
+        {
+            "name": "decostone-l-green"
+        },
+        {
+            "name": "decostone-e-green"
+        },
+        {
+            "name": "decostone-cand-green"
+        },
+        {
+            "name": "decostone-b-blue"
+        },
+        {
+            "name": "decostone-l-blue"
+        },
+        {
+            "name": "decostone-cand-blue"
+        },
+        {
+            "name": "decostone-e-blue"
+        },
+        {
+            "name": "decostone-b-red"
+        },
+        {
+            "name": "decostone-l-red"
+        },
+        {
+            "name": "decostone-e-red"
+        },
+        {
+            "name": "decostone-cand-red"
+        },
+        {
+            "name": "wood"
+        },
+        {
+            "name": "decowood",
+            "directions": 4
+        },
+        {
+            "name": "decowood-vert",
+            "directions": 4
+        },
+        {
+            "name": "fluffstone"
+        },
+        {
+            "name": "corner"
+        },
+        {
+            "name": "horizwooddark"
+        },
+        {
+            "name": "vertwooddark"
+        },
+        {
+            "name": "endwooddark",
+            "directions": 4
+        },
+        {
+            "name": "subwindow"
+        },
+        {
+            "name": "tent",
+            "directions": 4
+        },
+        {
+            "name": "tent_door1"
+        },
+        {
+            "name": "tent_door2"
+        },
+        {
+            "name": "tent_door0"
+        },
+        {
+            "name": "woodhole"
+        },
+        {
+            "name": "stonehole"
+        },
+        {
+            "name": "roofTurf_IC",
+            "directions": 4
+        },
+        {
+            "name": "roofTurf_OC",
+            "directions": 4
+        },
+        {
+            "name": "roofTurf_M",
+            "directions": 4
+        },
+        {
+            "name": "roofTurf_I"
+        },
+        {
+            "name": "badplaster"
+        }
+    ]
+}
