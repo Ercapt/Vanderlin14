@@ -1,0 +1,49 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: Thorn
+  parent: BaseItem
+  name: шип
+  description: Гострий шип з куща. Згодиться для голки.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Objects/Items/Medical/thorn.rsi
+    state: thorn
+  - type: Item
+    size: Tiny
+  - type: Thorn
+
+- type: entity
+  id: Thread
+  parent: BaseItem
+  name: нитка
+  description: Міцна рослинна нитка.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Objects/Items/Medical/thorn.rsi
+    state: fiber
+  - type: Item
+    size: Tiny
+  - type: Thread
+
+- type: entity
+  id: ThreadedNeedle
+  parent: BaseItem
+  name: голка з ниткою
+  description: Шип з заправленою ниткою. Згодиться для шиття.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Objects/Items/Medical/thorn.rsi
+    layers:
+    - map: [ "base" ]
+      state: unused
+  - type: Item
+    size: Tiny
+  - type: ThreadedNeedle
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NeedleVisuals.Used:
+        base:
+          True: { state: used }
+          False: { state: unused }

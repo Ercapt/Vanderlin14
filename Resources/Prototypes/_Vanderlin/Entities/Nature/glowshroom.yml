@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: GlowshroomA1
+  name: грибосвіт
+  description: Дивний гриб, що тихо гуде. Краще його не чіпати.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Glowshroom
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    state: glowshroom_A1
+    drawdepth: BelowMobs
+  - type: PointLight
+    radius: 2.0
+    energy: 2.0
+    color: "#7dff9a"
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      sense:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        hard: false
+        layer:
+        - LowImpassable
+  - type: StepTrigger
+    stepOn: true
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1

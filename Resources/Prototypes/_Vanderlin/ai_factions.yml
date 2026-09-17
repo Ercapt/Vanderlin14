@@ -1,0 +1,48 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Vanderlin AI factions. Only hostility is listed: anything not hostile is neutral.
+
+- type: npcFaction
+  id: VanderlinKingdom
+  hostile:
+  - VanderlinPredators
+  - VanderlinMonsters
+  - VanderlinUndead
+
+- type: npcFaction
+  id: VanderlinNeutral
+  hostile:
+  - VanderlinPredators
+  - VanderlinMonsters
+  - VanderlinUndead
+
+- type: npcFaction
+  id: VanderlinBeasts
+  hostile:
+  - VanderlinPredators
+  - VanderlinMonsters
+
+- type: npcFaction
+  id: VanderlinPredators
+  hostile:
+  - VanderlinKingdom
+  - VanderlinNeutral
+  - VanderlinBeasts
+  - VanderlinMonsters
+  - VanderlinUndead
+
+- type: npcFaction
+  id: VanderlinMonsters
+  hostile:
+  - VanderlinKingdom
+  - VanderlinNeutral
+  - VanderlinBeasts
+  - VanderlinPredators
+  - VanderlinUndead
+
+- type: npcFaction
+  id: VanderlinUndead
+  hostile:
+  - VanderlinKingdom
+  - VanderlinNeutral
+  - VanderlinPredators
+  - VanderlinMonsters

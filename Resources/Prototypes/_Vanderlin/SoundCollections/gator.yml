@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: soundCollection
+  id: VanderlinGatorAggro
+  files:
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatoraggro1.ogg
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatoraggro2.ogg
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatoraggro3.ogg
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatoraggro4.ogg
+
+- type: soundCollection
+  id: VanderlinGatorAttack
+  files:
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatorattack1.ogg
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatorattack2.ogg
+
+- type: soundCollection
+  id: VanderlinGatorDeath
+  files:
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatordeath.ogg
+
+- type: soundCollection
+  id: VanderlinGatorIdle
+  files:
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatoridle1.ogg
+
+- type: soundCollection
+  id: VanderlinGatorPain
+  files:
+  - /Audio/_Vanderlin/Voice/Mobs/Gator/gatorpain.ogg

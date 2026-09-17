@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: soundCollection
+  id: VanderlinDrownMale
+  files:
+  - "/Audio/_Vanderlin/Voice/Drown/male/drown (1).ogg"
+  - "/Audio/_Vanderlin/Voice/Drown/male/drown (2).ogg"
+  - "/Audio/_Vanderlin/Voice/Drown/male/drown (3).ogg"
+
+- type: soundCollection
+  id: VanderlinDrownFemale
+  files:
+  - "/Audio/_Vanderlin/Voice/Drown/female/drown (1).ogg"
+  - "/Audio/_Vanderlin/Voice/Drown/female/drown (2).ogg"
+  - "/Audio/_Vanderlin/Voice/Drown/female/drown (3).ogg"

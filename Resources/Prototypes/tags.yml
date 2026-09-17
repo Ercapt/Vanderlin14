@@ -639,6 +639,9 @@
   id: GlassBeaker # This tag is used as a common ingredient in the construction of various machines.
 
 - type: Tag
+  id: GlowshroomImmune # Vanderlin: entities immune to the glowshroom shock.
+
+- type: Tag
   id: GlassShard # ConstructionGraph: BladedFlatcapBrown, BladedFlatcapGrey, ImprovisedArrow, ImprovisedShotgunShellGraph, Shiv, Spear
 
 - type: Tag

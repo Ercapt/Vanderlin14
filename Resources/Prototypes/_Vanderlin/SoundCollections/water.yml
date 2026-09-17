@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: soundCollection
+  id: VanderlinWaterLand
+  files:
+  - /Audio/_Vanderlin/Water/water_land1.ogg
+  - /Audio/_Vanderlin/Water/water_land2.ogg
+  - /Audio/_Vanderlin/Water/water_land3.ogg
+
+- type: soundCollection
+  id: VanderlinWaterMove
+  files:
+  - "/Audio/_Vanderlin/Water/watermove (1).ogg"
+  - "/Audio/_Vanderlin/Water/watermove (2).ogg"

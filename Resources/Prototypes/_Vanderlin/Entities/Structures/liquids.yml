@@ -10,6 +10,14 @@
   - type: FloorOccluder
   - type: Transform
     anchored: true
+  - type: Rotatable
+    rotateWhileAnchored: true
+  - type: RiverCurrent
+    speed: 2.5
+  - type: DrowningWater
+    damage:
+      types:
+        Asphyxiation: 2
   - type: SyncSprite
   - type: Clickable
   - type: Sprite
@@ -17,6 +25,14 @@
     drawdepth: BelowFloor
     layers:
     - state: rivermove
+    - map: [ "enum.RiverBankLayer.South" ]
+      state: edge-s
+    - map: [ "enum.RiverBankLayer.East" ]
+      state: edge-e
+    - map: [ "enum.RiverBankLayer.North" ]
+      state: edge-n
+    - map: [ "enum.RiverBankLayer.West" ]
+      state: edge-w
     color: "#6A9295"
   - type: SolutionContainerManager
     solutions:
@@ -27,6 +43,11 @@
           Quantity: 9999999
   - type: DrainableSolution
     solution: pool
+  - type: Edible
+    edible: Drink
+    solution: pool
+    utensil: None
+    destroyOnEmpty: false
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
@@ -58,7 +79,208 @@
       # Goobstation - fishing
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: FootstepWater
+      collection: VanderlinWaterMove
+      params:
+        volume: 8
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1
+    blacklist:
+      tags:
+        - Catwalk
+  - type: TileEntityEffect
+    effects:
+    - !type:Extinguish
+  # Goobstation - fishing
+  - type: FishingSpot
+    fishList: !type:NestedSelector
+      tableId: WaterFishingLootTable
+    fishDefaultTimer: 25.0
+    fishTimerVariety: 15.0
+  # Goobstation - fishing
+
+- type: entity
+  id: StillWaterEntity
+  name: стояча вода
+  description: Спокійна чиста вода, можливо, тут водиться риба.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: FloorOccluder
+  - type: Transform
+    anchored: true
+  - type: RiverCurrent
+    speed: 0
+  - type: DrowningWater
+    damage:
+      types:
+        Asphyxiation: 2
+  - type: SyncSprite
+  - type: Clickable
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Liquid/water.rsi
+    drawdepth: BelowFloor
+    layers:
+    - state: water
+    - map: [ "enum.RiverBankLayer.South" ]
+      state: edge-s
+    - map: [ "enum.RiverBankLayer.East" ]
+      state: edge-e
+    - map: [ "enum.RiverBankLayer.North" ]
+      state: edge-n
+    - map: [ "enum.RiverBankLayer.West" ]
+      state: edge-w
+    color: "#6A9295"
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 9999999
+        reagents:
+        - ReagentId: Water
+          Quantity: 9999999
+  - type: DrainableSolution
+    solution: pool
+  - type: Edible
+    edible: Drink
+    solution: pool
+    utensil: None
+    destroyOnEmpty: false
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+      # Goobstation - fishing
+      fishing:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        layer:
+        - ItemMask
+        mask:
+        - HighImpassable
+        density: 1000
+        hard: false
+      # Goobstation - fishing
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: VanderlinWaterMove
+      params:
+        volume: 8
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1
+    blacklist:
+      tags:
+        - Catwalk
+  - type: TileEntityEffect
+    effects:
+    - !type:Extinguish
+  # Goobstation - fishing
+  - type: FishingSpot
+    fishList: !type:NestedSelector
+      tableId: WaterFishingLootTable
+    fishDefaultTimer: 25.0
+    fishTimerVariety: 15.0
+  # Goobstation - fishing
+
+- type: entity
+  id: SwampWaterEntity
+  name: болотна вода
+  description: Мутна смердюча вода. Краще її не пити.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: FloorOccluder
+  - type: Transform
+    anchored: true
+  - type: SwampWater
+  - type: RiverCurrent
+    speed: 0
+  - type: DrowningWater
+    damage:
+      types:
+        Asphyxiation: 2
+  - type: SyncSprite
+  - type: Clickable
+  - type: Sprite
+    sprite: _Vanderlin/Structures/Liquid/water.rsi
+    drawdepth: BelowFloor
+    layers:
+    - state: water
+    - map: [ "enum.RiverBankLayer.South" ]
+      state: edge-s
+    - map: [ "enum.RiverBankLayer.East" ]
+      state: edge-e
+    - map: [ "enum.RiverBankLayer.North" ]
+      state: edge-n
+    - map: [ "enum.RiverBankLayer.West" ]
+      state: edge-w
+    color: "#98934bc6"
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 9999999
+        reagents:
+        - ReagentId: Water
+          Quantity: 7500000
+        - ReagentId: CarpoToxin
+          Quantity: 2500000
+  - type: DrainableSolution
+    solution: pool
+  - type: Edible
+    edible: Drink
+    solution: pool
+    utensil: None
+    destroyOnEmpty: false
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+      # Goobstation - fishing
+      fishing:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        layer:
+        - ItemMask
+        mask:
+        - HighImpassable
+        density: 1000
+        hard: false
+      # Goobstation - fishing
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: VanderlinWaterMove
       params:
         volume: 8
   - type: StepTrigger
