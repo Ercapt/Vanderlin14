@@ -8,9 +8,6 @@
     },
     "states": [
         {
-            "name": "water1ripple"
-        },
-        {
             "name": "water2ripple",
             "directions": 4,
             "delays": [
