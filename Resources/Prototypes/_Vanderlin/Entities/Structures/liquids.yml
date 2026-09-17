@@ -236,7 +236,7 @@
   - type: SolutionContainerManager
     solutions:
       pool:
-        maxVol: 9999999
+        maxVol: 10000000
         reagents:
         - ReagentId: Water
           Quantity: 7500000

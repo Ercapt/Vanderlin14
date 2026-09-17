@@ -292,7 +292,9 @@ public abstract class SharedRiverCurrentController : VirtualController
         currentRot += bestCurrent.Comp!.Angle;
 
         // No centerline steering: pure push along the flow so mobs can move freely.
-        direction = currentRot.ToWorldVec() * bestSpeed;
+        // pushDir stays unit-length so the wall check below doesn't scale with speed.
+        var pushDir = currentRot.ToWorldVec();
+        direction = pushDir * bestSpeed;
 
         // Do a final check for hard contacts so if we're pushing into a wall then NOOP.
         contacts = PhysicsSystem.GetContacts((entity.Owner, fixtures));
@@ -310,7 +312,7 @@ public abstract class SharedRiverCurrentController : VirtualController
                 continue;
 
             var otherTransform = PhysicsSystem.GetPhysicsTransform(other);
-            var dotProduct = Vector2.Dot(otherTransform.Position - transform.Position, direction);
+            var dotProduct = Vector2.Dot(otherTransform.Position - transform.Position, pushDir);
 
             if (dotProduct > 1.5f)
             {

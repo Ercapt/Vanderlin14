@@ -49,7 +49,12 @@ public sealed class TileSpeedSystem : EntitySystem
     {
         var tile = GetTileId(uid);
         if (tile == null)
+        {
+            // Left the grid: drop any stale multiplier.
+            if (_lastTile.Remove(uid))
+                _movement.RefreshMovementSpeedModifiers(uid);
             return;
+        }
 
         if (_lastTile.TryGetValue(uid, out var last) && last == tile.Value)
             return;
@@ -62,7 +67,12 @@ public sealed class TileSpeedSystem : EntitySystem
     {
         var tile = GetTileId(uid);
         if (tile == null)
+        {
+            // Guarded remove: refresh only once so this can't recurse.
+            if (_lastTile.Remove(uid))
+                _movement.RefreshMovementSpeedModifiers(uid);
             return;
+        }
 
         var def = (ContentTileDefinition) _tileDefs[tile.Value];
         if (SpeedMultipliers.TryGetValue(def.ID, out var mult))

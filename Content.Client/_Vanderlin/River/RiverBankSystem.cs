@@ -49,6 +49,10 @@ public sealed class RiverBankSystem : EntitySystem
 
     private void OnShutdown(EntityUid uid, RiverCurrentComponent comp, ComponentShutdown args)
     {
+        // The entity itself may persist without the current (e.g. admin removal),
+        // so hide its own banks as well.
+        HideAll(uid);
+
         // The transform may already be detached, so refresh neighbours
         // around the last known position instead.
         if (_lastPos.TryGetValue(uid, out var last))

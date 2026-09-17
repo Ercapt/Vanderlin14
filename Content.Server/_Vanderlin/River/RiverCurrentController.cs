@@ -37,6 +37,10 @@ public sealed class RiverCurrentController : SharedRiverCurrentController
                                    CollisionGroup.Impassable),
             hard: false,
             body: physics);
+
+        // Wake anything already touching, so nothing gets stuck
+        // if the current appears under it.
+        WakeConveyed(uid);
     }
 
     private void OnShutdown(EntityUid uid, RiverCurrentComponent component, ComponentShutdown args)

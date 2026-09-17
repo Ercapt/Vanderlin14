@@ -55,13 +55,13 @@ public sealed class BushSystem : EntitySystem
             else
                 _popup.PopupEntity("Ви виймаєте з куща шип.", uid, user);
 
-            Deplete(uid, bush);
+            Deplete(uid, bush, user);
             return;
         }
 
         if (bush.RummagesLeft <= 0)
         {
-            Deplete(uid, bush);
+            Deplete(uid, bush, user);
             return;
         }
 
@@ -69,13 +69,13 @@ public sealed class BushSystem : EntitySystem
         _popup.PopupEntity("Ви риєтеся в кущі, але нічого цінного не знаходите.", uid, user);
     }
 
-    private void Deplete(EntityUid uid, BushComponent bush)
+    private void Deplete(EntityUid uid, BushComponent bush, EntityUid user)
     {
         bush.Depleted = true;
         bush.RummagesLeft = 0;
         Dirty(uid, bush);
 
         _appearance.SetData(uid, BushVisuals.Depleted, true);
-        _popup.PopupEntity("Ви намагаєтеся знайти щось цінне, та кущ пустий.", uid, uid);
+        _popup.PopupEntity("Ви намагаєтеся знайти щось цінне, та кущ пустий.", uid, user);
     }
 }
