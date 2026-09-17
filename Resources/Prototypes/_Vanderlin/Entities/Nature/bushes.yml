@@ -1,0 +1,285 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: Bush
+  name: кущ
+  description: Звичайний кущ. Може, всередині щось є.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Bush
+    thornChance: 0.3
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    drawdepth: BelowMobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: bush
+    - map: [ "empty" ]
+      state: bush_empty_overlay
+      visible: false
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        bush: ""
+        bush1: ""
+        bush2: ""
+        bush3: ""
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BushVisuals.Depleted:
+        empty:
+          True: { state: bush_empty_overlay, visible: true }
+          False: { state: bush_empty_overlay, visible: false }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      sense:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        hard: false
+        layer:
+        - LowImpassable
+
+- type: entity
+  id: Thornbush
+  name: терновий кущ
+  description: Колючий кущ. Обережно з руками.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Bush
+    thornChance: 0.6
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    drawdepth: BelowMobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: thornbush1
+    - map: [ "empty" ]
+      state: bush_empty_overlay
+      visible: false
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        thornbush1: ""
+        thornbush2: ""
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BushVisuals.Depleted:
+        empty:
+          True: { state: bush_empty_overlay, visible: true }
+          False: { state: bush_empty_overlay, visible: false }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      sense:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        hard: false
+        layer:
+        - LowImpassable
+
+- type: entity
+  id: BogBush
+  name: болотяний кущ
+  description: Кущ з болота. Пахне вогкістю.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Bush
+    thornChance: 0.3
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    drawdepth: BelowMobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: bush_bog
+    - map: [ "empty" ]
+      state: bush_empty_overlay
+      visible: false
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        bush_bog: ""
+        bush_bog1: ""
+        bush_bog2: ""
+        bush_bog3: ""
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BushVisuals.Depleted:
+        empty:
+          True: { state: bush_empty_overlay, visible: true }
+          False: { state: bush_empty_overlay, visible: false }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      sense:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        hard: false
+        layer:
+        - LowImpassable
+
+- type: entity
+  id: TundraBush
+  name: тундровий кущ
+  description: Кущ з холодних країв.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Bush
+    thornChance: 0.3
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    drawdepth: BelowMobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: bush_tundra
+    - map: [ "empty" ]
+      state: bush_empty_overlay
+      visible: false
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        bush_tundra: ""
+        bush3_tundra: ""
+        bush_tundra1: ""
+        bush_tundra2: ""
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BushVisuals.Depleted:
+        empty:
+          True: { state: bush_empty_overlay, visible: true }
+          False: { state: bush_empty_overlay, visible: false }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      sense:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        hard: false
+        layer:
+        - LowImpassable
+
+- type: entity
+  id: BushWall
+  name: кущова стіна
+  description: Густа стіна з кущів. Не пройти.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Bush
+    thornChance: 0.3
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    drawdepth: BelowMobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: bushwall1
+    - map: [ "empty" ]
+      state: bush_empty_overlay
+      visible: false
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        bushwall1: ""
+        bushwall2: ""
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BushVisuals.Depleted:
+        empty:
+          True: { state: bush_empty_overlay, visible: true }
+          False: { state: bush_empty_overlay, visible: false }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      solid:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - Impassable
+        mask:
+        - FullTileMask
+
+- type: entity
+  id: TundraBushWall
+  name: тундрова кущова стіна
+  description: Густа стіна з тундрових кущів. Не пройти.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Bush
+    thornChance: 0.3
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Vanderlin/Structures/foliage.rsi
+    drawdepth: BelowMobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: bushwall_tundra1
+    - map: [ "empty" ]
+      state: bush_empty_overlay
+      visible: false
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        bushwall_tundra1: ""
+        bushwall_tundra2: ""
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BushVisuals.Depleted:
+        empty:
+          True: { state: bush_empty_overlay, visible: true }
+          False: { state: bush_empty_overlay, visible: false }
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      solid:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - Impassable
+        mask:
+        - FullTileMask

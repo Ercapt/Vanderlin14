@@ -96,6 +96,7 @@
     sprite: _Goobstation/Objects/Specific/Fishing/fishing_lure.rsi
     size: Normal
   - type: FishingLure
+  - type: RiverCurrentImmune
 
 - type: entity
   id: FishingLureMakeshift

@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: soundCollection
+  id: VanderlinFootstepGrass
+  files:
+  - /Audio/_Vanderlin/Footsteps/FTGRA_A1.ogg
+  - /Audio/_Vanderlin/Footsteps/FTGRA_A2.ogg
+  - /Audio/_Vanderlin/Footsteps/FTGRA_A3.ogg
+  - /Audio/_Vanderlin/Footsteps/FTGRA_A4.ogg
+
+- type: soundCollection
+  id: VanderlinFootstepMud
+  files:
+  - "/Audio/_Vanderlin/Footsteps/FTMUD (1).ogg"
+  - "/Audio/_Vanderlin/Footsteps/FTMUD (2).ogg"
+  - "/Audio/_Vanderlin/Footsteps/FTMUD (3).ogg"
+  - "/Audio/_Vanderlin/Footsteps/FTMUD (4).ogg"
+  - "/Audio/_Vanderlin/Footsteps/FTMUD (5).ogg"
+
+- type: soundCollection
+  id: VanderlinFootstepRoad
+  files:
+  - /Audio/_Vanderlin/Footsteps/FTROC_A1.ogg
+  - /Audio/_Vanderlin/Footsteps/FTROC_A2.ogg
+  - /Audio/_Vanderlin/Footsteps/FTROC_A3.ogg
+  - /Audio/_Vanderlin/Footsteps/FTROC_A4.ogg
+
+- type: soundCollection
+  id: VanderlinPlantcross
+  files:
+  - /Audio/_Vanderlin/Natural/plantcross1.ogg
+  - /Audio/_Vanderlin/Natural/plantcross2.ogg
+  - /Audio/_Vanderlin/Natural/plantcross3.ogg
+  - /Audio/_Vanderlin/Natural/plantcross4.ogg

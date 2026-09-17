@@ -1,0 +1,12 @@
+- type: entity
+  name: п'явка
+  parent: BaseItem
+  id: Leech
+  description: Паразит який живиться кров'ю.
+  components:
+  - type: Sprite
+    sprite: _Vanderlin/Objects/Items/Medical/leech.rsi
+    state: leech
+  - type: Item
+    size: Tiny
+  - type: Leech

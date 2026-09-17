@@ -1,0 +1,163 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: tile
+  id: VanderlinGrass
+  name: трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/grass.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  edgeSpritePriority: 1
+  # NB: рушій малює край СУСІДА на наш тайл, тому сторони дзеркальні:
+  # файл XXXedge-n лежить у South і навпаки. Не "чинити".
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/grassedge-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/grassedge-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/grassedge-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/grassedge-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinRoad
+  name: дорога
+  sprite: /Textures/_Vanderlin/Tiles/Natural/road.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  footstepSounds:
+    collection: VanderlinFootstepRoad
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinMud
+  name: багно
+  sprite: /Textures/_Vanderlin/Tiles/Natural/dirt.png
+  footstepSounds:
+    collection: VanderlinFootstepMud
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinRock
+  name: каміння
+  sprite: /Textures/_Vanderlin/Tiles/Natural/rock.png
+  footstepSounds:
+    collection: VanderlinFootstepRoad
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinGrassCold
+  name: холодна трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/grass_cold.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/grass_coldedge-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/grass_coldedge-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/grass_coldedge-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/grass_coldedge-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinGrassHealthy
+  name: квітуча трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/grass_healthy.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/grass_healthyedge-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/grass_healthyedge-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/grass_healthyedge-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/grass_healthyedge-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinGrassRed
+  name: червона трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/grass_red.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/grass_rededge-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/grass_rededge-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/grass_rededge-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/grass_rededge-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinGrassYellow
+  name: жовта трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/grass_yel.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/grass_yeledge-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/grass_yeledge-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/grass_yeledge-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/grass_yeledge-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinGrassYellowMix
+  name: жовто-зелена трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/grass_yelmix.png
+  variants: 2
+  placementVariants:
+  - 0.5
+  - 0.5
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/grass_yelmixedge-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/grass_yelmixedge-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/grass_yelmixedge-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/grass_yelmixedge-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: VanderlinHellgrass
+  name: пекельна трава
+  sprite: /Textures/_Vanderlin/Tiles/Natural/hellgrass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Vanderlin/Tiles/Natural/hellgrass-n.png
+    East: /Textures/_Vanderlin/Tiles/Natural/hellgrass-w.png
+    North: /Textures/_Vanderlin/Tiles/Natural/hellgrass-s.png
+    West: /Textures/_Vanderlin/Tiles/Natural/hellgrass-e.png
+  footstepSounds:
+    collection: VanderlinFootstepGrass
+  weather: true
+  indestructible: true

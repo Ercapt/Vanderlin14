@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 96,
+        "y": 96
+    },
+    "states": [
+        {
+            "name": "gator",
+            "directions": 4
+        },
+        {
+            "name": "gator-eyes",
+            "directions": 4
+        },
+        {
+            "name": "gator-dead"
+        }
+    ]
+}

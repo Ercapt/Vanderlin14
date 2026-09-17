@@ -8,6 +8,18 @@
     },
     "states": [
         {
+            "name": "water",
+            "delays": [
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ]
+            ]
+        },
+        {
             "name": "water2ripple",
             "directions": 4,
             "delays": [

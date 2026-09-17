@@ -12,7 +12,7 @@
   - type: MobMover
   - type: NpcFactionMember
     factions:
-    - SimpleHostile
+    - VanderlinMonsters
   - type: MobThresholds
     thresholds:
       0: Alive

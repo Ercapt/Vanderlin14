@@ -1,0 +1,80 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: Alligator
+  parent: [ SimpleMobBase, MobCombat ]
+  name: алігатор
+  description: Великий хижак з боліт. Його очі ледь світяться у темряві. Краще не підходити.
+  components:
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      VisionRadius: !type:Single
+        7
+      AggroVisionRadius: !type:Single
+        8
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - VanderlinPredators
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Vanderlin/Mobs/Animals/gator.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: gator
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: gator-eyes
+      shader: unshaded
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: gator
+        BaseUnshaded: gator-eyes
+      Dead:
+        Base: gator-dead
+  - type: Icon
+    sprite: _Vanderlin/Mobs/Animals/gator.rsi
+    state: gator
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Dead
+  - type: MeleeWeapon
+    angle: 0
+    attackRate: 1.0
+    animation: WeaponArcBite
+    soundHit:
+      collection: VanderlinGatorAttack
+    damage:
+      types:
+        Piercing: 14
+        Slash: 8
+  - type: MobVoice
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.65
+        density: 250
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.2
+    baseSprintSpeed: 4.0
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 4
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - GlowshroomImmune
